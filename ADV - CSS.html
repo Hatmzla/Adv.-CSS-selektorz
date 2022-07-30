@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Advanced CSS - Assignment 1</title>
-    <style>
-            a[target="_blank"] {
-                color: green;
-            }
-            a[target="_self"] {
-                color: red;
-            }
-            #red{color: red;} #blu{color: blue;}
-
-            #para:first-child(2) {}
-                #para::after {
-                 content: " - NEW ";
-                 color: yellow;
-                }
-            #cener:hover {font-style: italic;}
-
+    <style> body {background-color: tan; font-size: x-large;}
+            a:hover {font-weight: 900;}
+            a[target="_blank"] {color: red;}
+            a[href^="https://www.google.com/"] {color: green;}
+            #first-div>p:after {content: " - NEW "; color: yellow;}
+            #second-div p:nth-child(even) {color: red;}
+            #second-div p:nth-child(odd) {color: blue;}
+            /*p:nth-child(9):hover {font-style: italic;}*/
+            body>p:last-child:hover {font-style: italic;}
     </style>
 </head>
-
 <body>
     <h1>Main Heading</h1>
     <p>Paragraph 1</p>
-    <a href="https://www.google.com/" target="_blank">Google</a>
-    <a id="Gugl" href="https://www.google.com/doodles" target="_blank">Google Doodles</a>
-    <a href="https://www.link-group.eu/" target="_self">Goto Link Group</a>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
     <div id="first-div">
         <h2>Subheading</h2>
-        <p id="para">Paragraph 2</p>
-        <p id="para">Paragraph 3</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
         <div id="second-div">
             <h3>Sub subheading</h3>
-            <p id="red">Paragraph 4</p>
-            <p id="blu">Paragraph 5</p>
-            <p id="red">Paragraph 6</p>
-            <p id="blu">Paragraph 7</p>
-            <p id="red">Paragraph 8</p>
-        </div>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
     </div>
+</div>
     <p>Paragraph 9</p>
-    <p id="cener">Paragraph 10</p>
+    <p>Paragraph 10</p>
 </body>
-
 </html>
